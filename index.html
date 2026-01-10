@@ -399,4 +399,18 @@
             computerChoiceElement.classList.remove('computer-choice');
         }
 
-        
+        // Show how to play modal
+        function showHowToPlay() {
+            howToPlayModal.classList.remove('hidden');
+        }
+
+        // Hide how to play modal
+        function hideHowToPlay() {
+            howToPlayModal.classList.add('hidden');
+        }
+
+        // Initialize the game when the page loads
+        window.addEventListener('DOMContentLoaded', initGame);
+    </script>
+</body>
+</html>
