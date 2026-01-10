@@ -338,4 +338,20 @@
                 case 'computer':
                     gameState.computerScore++;
                     resultText = `Computer wins! ${rules[computerChoice].message}`;
-    
+                    resultColor = 'text-red-500';
+                    break;
+                case 'draw':
+                    resultText = "It's a draw!";
+                    resultColor = 'text-gray-500';
+                    break;
+            }
+            
+            // Update scores
+            playerScoreElement.textContent = gameState.playerScore;
+            computerScoreElement.textContent = gameState.computerScore;
+            
+            // Display result
+            resultDisplay.innerHTML = `<p class="${resultColor} font-medium result-text">${resultText}</p>`;
+        }
+
+        
